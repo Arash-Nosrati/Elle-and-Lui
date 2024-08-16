@@ -1,0 +1,280 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #8a7f6e;
+    font-size: 16px;
+}
+
+/* Header Styles */
+header {
+    background: #f8eeed;
+    color: #8a7f6e;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#header-logo {
+    max-height: 100%;
+    height: auto;
+    max-width: none;
+}
+
+/* Home Section Styles */
+#home {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8eeed; /* Matches the overall theme */
+    color: #8a7f6e; /* Consistent text color */
+    border-radius: 12px;
+}
+
+#home h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #8a7f6e; /* Header color consistent with theme */
+}
+
+#home p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #8a7f6e; /* Paragraph color consistent with theme */
+}
+
+#home .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #eacfcd;
+    color: #8a7f6e;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#home .cta-button:hover {
+    background-color: #d4b5b3; /* Slightly darker shade on hover */
+}
+
+
+/* Book Now Button Styles */
+#book-now-button {
+    display: none;
+    background: #8a7f6e; /* Match the color of #call-button */
+    color: White; /* Text color to match the theme */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px; /* Rounded corners */
+    z-index: 1001;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+
+
+/* Menu Button Styles */
+#menu-button {
+    display: block;
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    margin-left: auto;
+}
+
+#menu-button .line {
+    width: 20px;
+    height: 2px;
+    background: #8a7f6e;
+    margin: 3px 0;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+/* Navigation Styles */
+#main-nav {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.2s ease-out, opacity 0.2s ease-out;
+    position: fixed;
+    top: 70px; /* Match the height of the header */
+    left: 0;
+    right: 0;
+    background: #f8eeed;
+    z-index: 999;
+    padding: 0 0.5rem;
+    text-align: center; /* Center the content inside the nav */
+}
+
+#main-nav.open {
+    max-height: 300px; /* Adjust to fit your menu content */
+    opacity: 1;
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-nav ul li {
+    display: block; /* Stack items vertically */
+    margin: 0.5rem 0; /* Space between items */
+}
+
+#main-nav ul li a {
+    color: #8a7f6e;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    text-align: center; /* Center the text inside each button */
+}
+
+
+/* Main Content Styles */
+main {
+    margin-top: 70px; /* Ensure there's space for the fixed header */
+    padding: 20px;
+}
+
+section {
+    padding: 30px 5px;
+}
+
+/* Service Card Styles */
+.service-card {
+    background: #f8eeed;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+}
+
+.extension-text {
+    font-size: 0.9rem; /* Slightly smaller text for the extension details */
+    color: #8a7f6e; /* Text color consistent with the overall theme */
+    margin-top: 0.5rem; /* Space above the extension details text */
+    line-height: 1.4; /* Improved readability */
+}
+
+/* Footer Styles */
+footer {
+    background: #8a7f6e;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer #store-logo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+footer p strong {
+    display: block;
+    font-weight: bold;
+}
+
+footer a {
+    color: White;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid #fff;
+    width: 80%;
+    margin: 2rem auto 1rem auto;
+}
+
+footer .footer-content p {
+    margin: 0;
+}
+
+/* Call Button Styles */
+#call-button {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background: #eacfcd;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#call-button img {
+    width: 25px;
+    border: none;
+}
+
+/* Hide the call button on larger screens */
+#call-button {
+    display: none;
+}
+
+/* Mobile Navigation and Call Button */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    #menu-button {
+        display: block;
+        margin-left: auto;
+    }
+
+    #main-nav {
+        width: 100%;
+    }
+
+    #call-button {
+        display: flex;
+    }
+
+    #book-now-button {
+        display: block;
+    }
+}
